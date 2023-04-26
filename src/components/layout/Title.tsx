@@ -40,13 +40,13 @@ class Title extends Component<IProps> {
 		const { visible } = this.state;
 		return (
 			<Flex
-				style={{ background: 'linear-gradient(141deg,#23303e,#404040 51%,#23303e 75%)' }}
+				style={{ background: 'white' }}
 				flexWrap="wrap"
 				flex="1"
 				alignItems="center"
 			>
 				<Flex style={{ marginLeft: 8 }} flex="0 1 auto">
-					<span style={{ color: '#fff', fontSize: 24, fontWeight: 500 }}>React Design Editor</span>
+					<span style={{ color: '#000', fontSize: 24, fontWeight: 500 }}>Chronovis</span>
 					<Tooltip title={i18next.t('action.go-github')} overlayStyle={{ fontSize: 16 }}>
 						<Button
 							className="rde-action-btn"
@@ -95,10 +95,10 @@ class Title extends Component<IProps> {
 						onClick={this.props.onChangeEditor}
 						selectedKeys={[this.props.currentEditor]}
 					>
-						<Menu.Item key="imagemap" style={{ color: '#fff' }}>
+						{/* <Menu.Item key="imagemap" style={{ color: '#000' }}>
 							{i18next.t('imagemap.imagemap')}
-						</Menu.Item>
-						<Menu.Item key="workflow" style={{ color: '#fff' }}>
+						</Menu.Item> */}
+						<Menu.Item key="workflow" style={{ color: '#000' }}>
 							{i18next.t('workflow.workflow')}
 						</Menu.Item>
 						{/* <Menu.Item key="flow" style={{ color: '#fff' }}>{i18n.t('flow.flow')}</Menu.Item> */}
