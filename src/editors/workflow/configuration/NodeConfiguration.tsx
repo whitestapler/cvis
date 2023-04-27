@@ -6,7 +6,7 @@ import { Form, Input, Select, InputNumber, Switch, Col, Tooltip } from 'antd';
 import Configuration from './index';
 import { Canvas } from '../../../canvas';
 import { InputJson, InputScript, InputTemplate } from '../../../components/common';
-import Icon from '../../../components/icon/Icon';
+//import Icon from '../../../components/icon/Icon';
 
 export const getNode = nodeClazz => {
 	const classPath = nodeClazz.split('.');
@@ -168,7 +168,7 @@ export default class NodeConfiguration extends Component<IProps> {
 		const label =
 			description && description.length ? (
 				<React.Fragment>
-					{icon ? <Icon name={icon} /> : null}
+					{/* {icon ? <Icon name={icon} /> : null} */}
 					<span>{formConfig.label}</span>
 					<Tooltip title={description} placement="topRight">
 						<span style={{ float: 'right', marginLeft: 280 }}>
@@ -178,7 +178,7 @@ export default class NodeConfiguration extends Component<IProps> {
 				</React.Fragment>
 			) : (
 				<React.Fragment>
-					{icon ? <Icon name={icon} /> : null}
+					{/* {icon ? <Icon name={icon} /> : null} */}
 					<span>{formConfig.label}</span>
 				</React.Fragment>
 			);

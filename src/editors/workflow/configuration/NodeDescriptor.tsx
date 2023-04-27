@@ -76,10 +76,10 @@ class NodeDescriptor extends Component<IProps> {
 		return (
 			<Flex flexDirection="column" style={{ margin: '8px 16px' }}>
 				<h2 style={{ color: NODE_COLORS[selectedItem.descriptor.type].fill }}>
-					<Icon
+					{/* <Icon
 						name={selectedItem.descriptor.icon.length ? selectedItem.descriptor.icon : 'image'}
 						style={{ marginRight: 8 }}
-					/>
+					/> */}
 					<span>{selectedItem.descriptor.name}</span>
 				</h2>
 				<div>{selectedItem.descriptor.description}</div>

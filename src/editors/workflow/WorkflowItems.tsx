@@ -7,7 +7,7 @@ import { uuid } from 'uuidv4';
 import { CanvasInstance } from '../../canvas';
 import { CommonButton, Scrollbar } from '../../components/common';
 import { Flex } from '../../components/flex';
-import Icon from '../../components/icon/Icon';
+//import Icon from '../../components/icon/Icon';
 import { getNode } from './configuration/NodeConfiguration';
 import { NODE_COLORS } from './constant/constants';
 
@@ -181,10 +181,10 @@ class WorkflowItems extends Component<IProps> {
 					style={{ justifyContent: this.state.collapse ? 'center' : null }}
 				>
 					<span className="rde-editor-items-item-icon">
-						<Icon
+						{/* <Icon
 							name={item.icon && item.icon.length ? item.icon : 'image'}
 							color={NODE_COLORS[item.type].fill}
-						/>
+						/> */}
 					</span>
 					{this.state.collapse ? null : <span className="rde-editor-items-item-text">{item.name}</span>}
 				</div>
@@ -209,7 +209,7 @@ class WorkflowItems extends Component<IProps> {
 							style={{ margin: '0 4px' }}
 							onClick={this.handlers.onCollapse}
 						/>
-						{collapse ? null : (
+						{/* {collapse ? null : (
 							<Input
 								style={{ margin: '8px' }}
 								placeholder={i18n.t('action.search-list')}
@@ -217,7 +217,7 @@ class WorkflowItems extends Component<IProps> {
 								value={textSearch}
 								allowClear={true}
 							/>
-						)}
+						)} */}
 					</Flex>
 					<Scrollbar>
 						<Flex flex="1" style={{ overflowY: 'hidden' }}>

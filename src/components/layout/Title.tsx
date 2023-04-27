@@ -16,11 +16,11 @@ class Title extends Component<IProps> {
 		visible: false,
 	};
 
-	componentDidMount() {
-		if (globalThis) {
-			(globalThis.adsbygoogle = globalThis.adsbygoogle || []).push({});
-		}
-	}
+	// componentDidMount() {
+	// 	if (globalThis) {
+	// 		(globalThis.adsbygoogle = globalThis.adsbygoogle || []).push({});
+	// 	}
+	// }
 
 	handlers = {
 		goGithub: () => {
@@ -40,93 +40,76 @@ class Title extends Component<IProps> {
 		const { visible } = this.state;
 		return (
 			<Flex
-				style={{ background: 'white' }}
+				style={{ background: 'white', position: 'relative'}}
 				flexWrap="wrap"
 				flex="1"
 				alignItems="center"
 			>
-				<Flex style={{ marginLeft: 8 }} flex="0 1 auto">
-					<span style={{ color: '#000', fontSize: 24, fontWeight: 500 }}>Chronovis</span>
-					<Tooltip title={i18next.t('action.go-github')} overlayStyle={{ fontSize: 16 }}>
-						<Button
+				<Flex style={{ marginLeft: 20, marginTop: 15, position: 'absolute' }} flex="0 1 auto">
+					<span style={{ color: '#000', fontFamily: 'Apercu Pro', fontSize: 24, fontWeight: 500 }}>Chronovis Paintbox</span>
+					
+				</Flex>
+				<Flex style={{ right: 20, marginLeft: 88, marginTop: 10, position: 'absolute' }}>
+					{/* <Tooltip title={i18next.t('action.go-github')} overlayStyle={{ fontSize: 16 }}>*/}
+					<Button
 							className="rde-action-btn"
 							style={{
-								color: 'white',
+								color: 'black',
 							}}
-							shape="circle"
-							size="large"
 							onClick={this.handlers.goGithub}
 						>
-							<Icon name="github" prefix="fab" size={1.5} />
+							<span style={{ textDecorationLine: "underline", color: '#000', fontFamily: 'Arco Perpetuo', fontSize: 14, fontWeight: 150 }}>About</span>
+
+							{/* <Icon name="github" prefix="fab" size={1.5} /> */}
 						</Button>
-					</Tooltip>
-					<Tooltip title={i18next.t('action.go-docs')} overlayStyle={{ fontSize: 16 }}>
+					{/* </Tooltip>
+					<Tooltip title={i18next.t('action.go-docs')} overlayStyle={{ fontSize: 16 }}>*/}
 						<Button
 							className="rde-action-btn"
 							style={{
-								color: 'white',
+								color: 'black',
 							}}
-							shape="circle"
-							size="large"
 							onClick={this.handlers.goDocs}
-						>
-							<Icon name="book" prefix="fas" size={1.5} />
+						>							
+							<span style={{ textDecorationLine: "underline", color: '#000', fontFamily: 'Arco Perpetuo', fontSize: 14, fontWeight: 150 }}>Docs</span>
+
+							{/* <Icon name="book" prefix="fas" size={1.5} /> */}
 						</Button>
-					</Tooltip>
-					<Tooltip title={i18next.t('action.shortcut-help')} overlayStyle={{ fontSize: 16 }}>
+					{/* </Tooltip>
+					<Tooltip title={i18next.t('action.shortcut-help')} overlayStyle={{ fontSize: 16 }}>*/}
 						<Button
 							className="rde-action-btn"
 							style={{
 								color: 'white',
 							}}
-							shape="circle"
-							size="large"
-							onClick={this.handlers.showHelp}
+							//onClick={this.handlers.showHelp}
 						>
-							<Icon name="question" prefix="fas" size={1.5} />
+							<span style={{ textDecorationLine: "underline", color: '#000', fontFamily: 'Arco Perpetuo', fontSize: 14, fontWeight: 150 }}>Save</span>
+
+							{/* <Icon name="question" prefix="fas" size={1.5} /> */}
 						</Button>
-					</Tooltip>
+						<Button
+							className="rde-action-btn"
+							style={{
+								color: 'white',
+							}}
+							//onClick={this.handlers.showHelp}
+						>
+							<span style={{ textDecorationLine: "underline", color: '#000', fontFamily: 'Arco Perpetuo', fontSize: 14, fontWeight: 150 }}>Settings</span>
+
+							{/* <Icon name="question" prefix="fas" size={1.5} /> */}
+						</Button>
+					{/* </Tooltip> */}
 				</Flex>
-				<Flex style={{ marginLeft: 88 }}>
-					<Menu
-						mode="horizontal"
-						theme="dark"
-						style={{ background: 'transparent', fontSize: '16px' }}
-						onClick={this.props.onChangeEditor}
-						selectedKeys={[this.props.currentEditor]}
-					>
-						{/* <Menu.Item key="imagemap" style={{ color: '#000' }}>
-							{i18next.t('imagemap.imagemap')}
-						</Menu.Item> */}
-						<Menu.Item key="workflow" style={{ color: '#000' }}>
-							{i18next.t('workflow.workflow')}
-						</Menu.Item>
-						{/* <Menu.Item key="flow" style={{ color: '#fff' }}>{i18n.t('flow.flow')}</Menu.Item> */}
-						{/* <Menu.Item key="hexgrid" style={{ color: '#fff' }}>
-							{i18next.t('hexgrid.hexgrid')}
-						</Menu.Item>
-						<Menu.Item key="fiber" style={{ color: '#fff' }}>
-							{i18next.t('fiber.fiber')}
-						</Menu.Item> */}
-					</Menu>
-				</Flex>
-				<Flex flex="1" justifyContent="flex-end">
-					<ins
-						className="adsbygoogle"
-						style={{ display: 'inline-block', width: 600, height: 60 }}
-						data-ad-client="ca-pub-8569372752842198"
-						data-ad-slot="5790685139"
-					/>
-				</Flex>
-				<Modal
+				{/* <Modal
 					visible={visible}
 					onCancel={() => this.setState({ visible: false })}
 					closable={true}
 					footer={null}
-					width="50%"
+					width="80%"
 				>
 					<ShortcutHelp />
-				</Modal>
+				</Modal> */}
 			</Flex>
 		);
 	}

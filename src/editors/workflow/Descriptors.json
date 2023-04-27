@@ -1,4 +1,38 @@
 {
+	"TIMELINE": [
+		{
+			"name": "TemporalTimeline",
+			"description": "The Timer Trigger will fire a workflow on a scheduled interval.",
+			"type": "TIMELINE",
+			"nodeClazz": "TemporalTimelineNode",
+			"configClazz": "TimerNodeConfiguration",
+			"defaultConfiguration": {
+				"scheduleType": "SIMPLE_INTERVAL",
+				"interval": 1,
+				"timeUnit": "MINUTES"
+			},
+			"inEnabled": false,
+			"outPortType": "SINGLE",
+			"outPorts": [
+				""
+			]
+		},
+		{
+			"name": "RelativeTimeline",
+			"description": "fire a rule chain when the \"virtual button\" is pressed",
+			"type": "TIMELINE",
+			"nodeClazz": "RelativeTimelineNode",
+			"configClazz": "RelativeTimelineConfiguration",
+			"defaultConfiguration": {
+				"payload": "{\"key\":\"value\"}"
+			},
+			"inEnabled": false,
+			"outPortType": "SINGLE",
+			"outPorts": [
+				""
+			]
+		}
+	],
 	"TRIGGER": [
 		{
 			"name": "Timer",

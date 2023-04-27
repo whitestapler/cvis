@@ -394,15 +394,16 @@ class WorkflowEditor extends Component {
 						<WorkflowToolbar canvasRef={this.canvasRef} zoomRatio={zoomRatio} />
 					</div>
 				</div>
-				<WorkflowConfigurations
+				{/* <WorkflowConfigurations
 					workflow={workflow}
 					selectedItem={selectedItem}
 					canvasRef={this.canvasRef}
 					onChange={onChange}
-				/>
+				/> */}
 			</div>
 		);
-		return <Content title={title} content={content} loading={loading} className="" />;
+		return <Content content={content} loading={loading} className="" />;
+		//title={title}
 	}
 }
 

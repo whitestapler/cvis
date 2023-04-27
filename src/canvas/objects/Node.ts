@@ -23,6 +23,10 @@ export const NODE_COLORS = {
 		fill: '#F5B041',
 		border: 'rgb(243, 156, 18)',
 	},
+	TIMELINE: {
+		fill: 'rgb(200,200,200)',
+		border: 'rgb(100, 100,100)',
+	},
 };
 
 export const OUT_PORT_TYPE = {
