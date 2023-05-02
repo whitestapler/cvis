@@ -1,7 +1,7 @@
 import metadata from '../../../libs/fontawesome-5.2.0/metadata/icons.json';
 
 import ActionNode from './action/ActionNode';
-import DataNode from './data/DataNode';
+import PointSpanNode from './data/PointSpanNode';
 import LogicNode from './logic/LogicNode';
 import TriggerNode from './trigger/TriggerNode';
 
@@ -41,9 +41,9 @@ const NODES = {
 				descriptor,
 			}),
 	},
-	DATA: {
+	POINTSPAN: {
 		create: (option, descriptor) =>
-			new DataNode({
+			new PointSpanNode({
 				...defaultOption,
 				...option,
 				descriptor,

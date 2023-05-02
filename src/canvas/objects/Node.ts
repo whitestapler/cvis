@@ -8,20 +8,20 @@ import Port, { PortObject } from './Port';
 
 export const NODE_COLORS = {
 	TRIGGER: {
-		fill: '#48C9B0',
-		border: '#1ABC9C',
+		fill: 'rgb(200,200,200)',
+		border: 'rgb(100, 100,100)',
 	},
 	LOGIC: {
-		fill: '#AF7AC5',
-		border: '#9B59B6',
+		fill: 'rgb(200,200,200)',
+		border: 'rgb(100, 100,100)',
 	},
-	DATA: {
-		fill: '#5DADE2',
-		border: '#3498DB',
+	POINTSPAN: {
+		fill: 'rgb(200,200,200)',
+		border: 'rgb(100, 100,100)',
 	},
 	ACTION: {
-		fill: '#F5B041',
-		border: 'rgb(243, 156, 18)',
+		fill: 'rgb(200,200,200)',
+		border: 'rgb(100, 100,100)',
 	},
 	TIMELINE: {
 		fill: 'rgb(200,200,200)',
@@ -63,7 +63,7 @@ export const getEllipsis = (text: string, length: number) => {
 		: text;
 };
 
-export type NodeType = 'TRIGGER' | 'LOGIC' | 'DATA' | 'ACTION';
+export type NodeType = 'TRIGGER' | 'LOGIC' | 'POINTSPAN' | 'ACTION';
 
 export interface NodeObject extends FabricObject<fabric.Group> {
 	errorFlag?: fabric.IText;
@@ -109,8 +109,8 @@ const Node = fabric.util.createClass(fabric.Group, {
 			fill: 'rgba(255, 255, 255, 0.8)',
 		});
 		const rect = new fabric.Rect({
-			rx: 10,
-			ry: 10,
+			//rx: 10,
+			//ry: 10,
 			width: 200,
 			height: 40,
 			fill: options.fill || 'rgba(0, 0, 0, 0.3)',
@@ -132,7 +132,7 @@ const Node = fabric.util.createClass(fabric.Group, {
 			originX: 'left',
 			originY: 'top',
 			hasRotatingPoint: false,
-			hasControls: false,
+			hasControls: true,
 		});
 		this.callSuper('initialize', node, option);
 		icon.set({

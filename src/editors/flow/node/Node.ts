@@ -9,20 +9,20 @@ import Port, { PortObject } from '../../../canvas/objects/Port';
 
 export const NODE_COLORS = {
 	TRIGGER: {
-		fill: '#38424b',
-		border: '#1ABC9C',
+		fill: 'rgb(200,200,200)',
+		border: 'rgb(100, 100,100)',
 	},
 	LOGIC: {
-		fill: '#38424b',
-		border: '#9B59B6',
+		fill: 'rgb(200,200,200)',
+		border: 'rgb(100, 100,100)',
 	},
-	DATA: {
-		fill: '#38424b',
-		border: '#3498DB',
+	POINTSPAN: {
+		fill: 'rgb(200,200,200)',
+		border: 'rgb(100, 100,100)',
 	},
 	ACTION: {
-		fill: '#38424b',
-		border: 'rgb(243, 156, 18)',
+		fill: 'rgb(200,200,200)',
+		border: 'rgb(100, 100,100)',
 	},
 };
 
@@ -60,7 +60,7 @@ export const getEllipsis = (text: string, length: number) => {
 		: text;
 };
 
-export type NodeType = 'TRIGGER' | 'LOGIC' | 'DATA' | 'ACTION';
+export type NodeType = 'TRIGGER' | 'LOGIC' | 'POINTSPAN' | 'ACTION';
 
 export interface NodeObject extends FabricObject<fabric.Group> {
 	errorFlag?: fabric.IText;

@@ -157,11 +157,11 @@
 			"icon": "random"
 		}
 	],
-	"DATA": [
+	"POINTSPAN": [
 		{
 			"name": "Counter: Get",
 			"description": "Get counter",
-			"type": "DATA",
+			"type": "POINTSPAN",
 			"nodeClazz": "CounterGetNode",
 			"configClazz": "CounterGetNodeConfiguration",
 			"defaultConfiguration": {
@@ -178,7 +178,7 @@
 		{
 			"name": "Counter: Set",
 			"description": "Set counter",
-			"type": "DATA",
+			"type": "POINTSPAN",
 			"nodeClazz": "CounterSetNode",
 			"configClazz": "CounterSetNodeConfiguration",
 			"defaultConfiguration": {

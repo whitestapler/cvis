@@ -2,20 +2,20 @@ import i18n from 'i18next';
 
 const NODE_COLORS = {
 	TRIGGER: {
-		fill: '#48C9B0',
-		border: '#1ABC9C',
+		fill: "rgb(200,200,200)",
+		border: "rgb(100,100,100)",
 	},
 	LOGIC: {
-		fill: '#AF7AC5',
-		border: '#9B59B6',
+		fill: "rgb(200,200,200)",
+		border: "rgb(100,100,100)",
 	},
-	DATA: {
-		fill: '#5DADE2',
-		border: '#3498DB',
+	POINTSPAN: {
+		fill: "rgb(200,200,200)",
+		border: "rgb(100,100,100)",
 	},
 	ACTION: {
-		fill: '#F5B041',
-		border: 'rgb(243, 156, 18)',
+		fill: "rgb(200,200,200)",
+		border: "rgb(100,100,100)",
 	},
 	TIMELINE:{
 		fill: "rgb(200,200,200)",

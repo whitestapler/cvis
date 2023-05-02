@@ -1,7 +1,7 @@
 import metadata from '../../../libs/fontawesome-5.2.0/metadata/icons.json';
 
 import ActionNode from './action/ActionNode';
-import DataNode from './data/DataNode';
+import PointSpanNode from './data/PointSpanNode';
 import LogicNode from './logic/LogicNode';
 import TriggerNode from './trigger/TriggerNode';
 import TimelineNode from './timelines/TimelineNode';
@@ -37,36 +37,36 @@ const defaultOption = {
 };
 
 const NODES = {
-	ACTION: {
+	// ACTION: {
+	// 	create: (option, descriptor) =>
+	// 		new ActionNode({
+	// 			...defaultOption,
+	// 			...option,
+	// 			descriptor,
+	// 		}),
+	// },
+	POINTSPAN: {
 		create: (option, descriptor) =>
-			new ActionNode({
+			new PointSpanNode({
 				...defaultOption,
 				...option,
 				descriptor,
 			}),
 	},
-	DATA: {
-		create: (option, descriptor) =>
-			new DataNode({
-				...defaultOption,
-				...option,
-				descriptor,
-			}),
-	},
-	LOGIC: {
-		create: (option, descriptor) => {
-			const node = getNode(descriptor.nodeClazz);
-			const options = Object.assign({}, defaultOption, { descriptor }, option);
-			switch (node) {
-				case 'FilterNode':
-					return new FilterNode(options);
-				case 'SwitchNode':
-					return new SwitchNode(options);
-				default:
-					return new LogicNode(options);
-			}
-		},
-	},
+	// LOGIC: {
+	// 	create: (option, descriptor) => {
+	// 		const node = getNode(descriptor.nodeClazz);
+	// 		const options = Object.assign({}, defaultOption, { descriptor }, option);
+	// 		switch (node) {
+	// 			case 'FilterNode':
+	// 				return new FilterNode(options);
+	// 			case 'SwitchNode':
+	// 				return new SwitchNode(options);
+	// 			default:
+	// 				return new LogicNode(options);
+	// 		}
+	// 	},
+	// },
 	TIMELINE: {
 		create: (option, descriptor) => {
 			const node = getNode(descriptor.nodeClazz);
@@ -80,20 +80,19 @@ const NODES = {
 					return new TimelineNode(options);
 			}
 		},
-	},
-	TRIGGER: {
-		create: (option, descriptor) => {
-			const node = getNode(descriptor.nodeClazz);
-			const options = Object.assign({}, defaultOption, { descriptor }, option);
-			switch (node) {
-				case 'VirtualButtonNode':
-					return new VirtualButtonNode(options);
-				default:
-					return new TriggerNode(options);
-			}
+	// },
+	// TRIGGER: {
+	// 	create: (option, descriptor) => {
+	// 		const node = getNode(descriptor.nodeClazz);
+	// 		const options = Object.assign({}, defaultOption, { descriptor }, option);
+	// 		switch (node) {
+	// 			case 'VirtualButtonNode':
+	// 				return new VirtualButtonNode(options);
+	// 			default:
+	// 				return new TriggerNode(options);
+	// 		}
 		},
-	},
-};
+	};
 
 export default descriptors => {
 	return Object.keys(descriptors).reduce((prev, key) => {
