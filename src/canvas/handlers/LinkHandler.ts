@@ -1,5 +1,6 @@
 import warning from 'warning';
 import { CurvedLink } from '../objects';
+import { OrthogonalLink } from 'fabric/fabric-impl';
 import { LinkObject } from '../objects/Link';
 import { NodeObject } from '../objects/Node';
 import { PortObject } from '../objects/Port';
